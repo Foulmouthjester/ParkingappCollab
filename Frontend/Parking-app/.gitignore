@@ -48,7 +48,7 @@ TestResults/
 # Ignore Windows system files
 Thumbs.db
 Desktop.ini
-51|
+
 # Node.js and JavaScript related
 node_modules/
 .pnp/
