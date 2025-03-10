@@ -26,6 +26,7 @@ body {
 
 h2 {
   text-align: center;
+  color: #333;
   margin-bottom: 20px;
 }
 
@@ -72,6 +73,7 @@ button {
 .toggle-text {
   text-align: center;
   margin-top: 15px;
+  color: #333;
 }
 
 .toggle-link {
