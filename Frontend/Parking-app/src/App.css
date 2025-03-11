@@ -1,86 +1,42 @@
-
-body {
-  font-family: Arial, sans-serif;
-  background-image: url('https://images.unsplash.com/photo-1588008984524-442dbfe167e8?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-
-* {
-  box-sizing: border-box; 
-}
-
-.login-container {
-  background-color: rgba(255, 255, 255, 0.8); 
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 300px;
-}
-
-h2 {
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
-  color: #333;
-  margin-bottom: 20px;
 }
 
-.input-group {
-  margin-bottom: 15px;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-  .input-group label {
-    color: #333; 
-    font-size: 14px; 
-    display: block;
-    margin-bottom: 5px;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  .input-group input {
-    width: 100%; 
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+  to {
+    transform: rotate(360deg);
   }
-
-button {
-  width: 100%; 
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
 }
 
-  button:hover {
-    background-color: #0056b3;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
   }
-
-.error-message {
-  color: red;
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 10px;
 }
 
-.toggle-text {
-  text-align: center;
-  margin-top: 15px;
-  color: #333;
+.card {
+  padding: 2em;
 }
 
-.toggle-link {
-  color: #007bff;
-  cursor: pointer;
+.read-the-docs {
+  color: #888;
 }
-
-  .toggle-link:hover {
-    text-decoration: underline;
-  }
