@@ -52,7 +52,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color:#ffffff;
-  color: black;
+  color: rgb(3, 3, 3);
   cursor: pointer;
   transition: border-color 0.25s;
 }
