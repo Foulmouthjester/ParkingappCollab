@@ -16,3 +16,4 @@ Startpage need a sign in / sign up
 
 
 Uploaded my backend (jonas) we are going to use that as a start.
+Added database and changed some code (name to email and added password)
