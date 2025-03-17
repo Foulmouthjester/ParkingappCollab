@@ -6,10 +6,10 @@ export const NavBar = () => {
     return (
         <div className="header">
             <div className="navbar">
-                <div className="logo-container">
+                <div className="title-container">
                     <h1 className="title" onClick={() => navigate('/')}>EcoPark</h1>
-                    <img src="/src/assets/ecopark.svg" alt="EcoPark Logo" className="logo" onClick={() => navigate('/')}/>
                 </div>
+                <img src="/src/assets/ecopark.svg" alt="EcoPark Logo" className="logo" onClick={() => navigate('/')}/>
                 <h2 className="tagline">Park with purpose</h2>
             </div>
         </div>

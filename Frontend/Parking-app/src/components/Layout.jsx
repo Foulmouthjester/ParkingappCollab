@@ -1,12 +1,11 @@
 import { NavBar } from "./NavBar"
 import { Footer } from "./Footer"
 
-
 export const Layout = ({children}) => {
   return (
-    <div>
+    <div className="layout-container">
         <NavBar />
-        <main>{children}</main>
+        <main className="main-container">{children}</main>
         <Footer />
     </div>
   )
