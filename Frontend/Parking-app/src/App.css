@@ -9,10 +9,10 @@
 }
 
 .header {
-  background-color: #0CCA4A;
+  background-color: var(--primary-color);
   width: 100%;
   height: 100px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 .navbar {
@@ -24,19 +24,20 @@
   margin: 0 auto;
 }
 
-.call-to-action {
-  background-color: #0CCA4A;
-  color: white;
-  padding: 20px;
-  max-width: 1280px;
-  margin: 40px auto;
-  border-radius: 30px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .logo {
   max-width: 250px;
   height: 70px;
+}
+
+.tagline {
+  color: white;
+  font-size: 1.2rem;
 }
 
 .main-content {
@@ -68,7 +69,7 @@
   z-index: 0;
 }
 .main-content > h1, h2 {
-  color: rgb(53, 231, 53);
+  color: var(--primary-color);
   margin-bottom: 20px;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -76,7 +77,7 @@
 .sharp-text {
   position: relative; /* Ensures it's above the blurred background */
   text-align: center;
-  color: rgb(53, 231, 53);
+  color: var(--primary-color);
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1; /* Keep text above */
 }
@@ -91,17 +92,56 @@
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
-  background-color: green;
+  background-color: var(--primary-color);
   color: white;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-selection button:hover {
+  background-color: var(--primary-color-hover);
 }
 
 .footer {
-  background-color: #0CCA4A;
+  background-color: var(--primary-color);
   width: 100%;
   text-align: center;
   padding: 30px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .header {
+    height: auto;
+    padding: 10px 0;
+  }
+  
+  .logo {
+    max-width: 200px;
+    height: 60px;
+  }
+  
+  .main-content {
+    margin: 20px auto;
+    padding: 15px;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .button-selection {
+    flex-direction: column;
+  }
+  
+  .button-selection button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 

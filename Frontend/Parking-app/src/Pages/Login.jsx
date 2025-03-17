@@ -1,7 +1,5 @@
-import { NavBar } from "./NavBar";
-import { Footer } from "./Footer";
 import { useState } from "react";
-import "./Auth.css";
+import "../Auth.css";
 
 export const Login = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +21,6 @@ export const Login = () => {
   };
   return (
     <div>
-      <NavBar />
       <div className="auth-container">
         <h2>Welcome Back</h2>
         <form onSubmit={handleSubmit}>
@@ -61,7 +58,6 @@ export const Login = () => {
           </p>
         </form>
       </div>
-      <Footer />
     </div>
   );
 };

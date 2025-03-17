@@ -1,7 +1,5 @@
-import { NavBar } from "./NavBar";
-import { Footer } from "./Footer";
 import { useState } from "react";
-import "./Auth.css";
+import "../Auth.css";
 
 export const Register = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +9,8 @@ export const Register = () => {
     confirmPassword: "",
   });
 
+  const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -18,18 +18,44 @@ export const Register = () => {
     });
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+    
+    // Username validation
+    if (formData.username.length < 3) {
+      newErrors.username = "Username must be at least 3 characters";
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+    
+    // Password validation
+    if (formData.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
+    }
+    
+    // Confirm password
+    if (formData.password !== formData.confirmPassword) {
+      newErrors.confirmPassword = "Passwords don't match";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords don't match!");
-      return;
+    if (validateForm()) {
+      // Add your registration logic here
+      console.log("Registration data:", formData);
     }
-    // Add your registration logic here
-    console.log("Registration data:", formData);
   };
+
   return (
     <div>
-      <NavBar />
       <div className="auth-container">
         <h2>Sign up page</h2>
         <form onSubmit={handleSubmit}>
@@ -42,6 +68,7 @@ export const Register = () => {
               onChange={handleChange}
               required
             />
+            {errors.username && <p className="auth-error">{errors.username}</p>}
           </div>
 
           <div className="auth-form-group">
@@ -53,6 +80,7 @@ export const Register = () => {
               onChange={handleChange}
               required
             />
+            {errors.email && <p className="auth-error">{errors.email}</p>}
           </div>
 
           <div className="auth-form-group">
@@ -64,6 +92,7 @@ export const Register = () => {
               onChange={handleChange}
               required
             />
+            {errors.password && <p className="auth-error">{errors.password}</p>}
           </div>
 
           <div className="auth-form-group">
@@ -75,6 +104,7 @@ export const Register = () => {
               onChange={handleChange}
               required
             />
+            {errors.confirmPassword && <p className="auth-error">{errors.confirmPassword}</p>}
           </div>
 
           <button type="submit" className="auth-button">
@@ -89,7 +119,6 @@ export const Register = () => {
           </p>
         </form>
       </div>
-      <Footer />
     </div>
   );
 };
