@@ -7,15 +7,15 @@ namespace ParkingSystem.Models;
 public class User
 {
   [Key]
-  public string Email { get; set; } = string.Empty; // ✅ Prevents CS8618
+  public string Email { get; set; } = string.Empty; 
 
-  public string PasswordHash { get; set; } = string.Empty; // ✅ Prevents CS8618
+  public string PasswordHash { get; set; } = string.Empty; 
 
   public decimal AccountBalance { get; set; } = 0;
 
-  public List<string> Cars { get; set; } = new(); // ✅ No change needed
+  public List<string> Cars { get; set; } = new(); 
 
-  [NotMapped] // Prevents EF from mapping this directly
+  [NotMapped] 
   public string CarsSerialized
   {
     get => string.Join(",", Cars);

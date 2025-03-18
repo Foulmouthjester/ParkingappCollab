@@ -10,7 +10,7 @@ using ParkingSystem.Data;
 
 namespace Parkingapp.Migrations
 {
-    [DbContext(typeof(ParkingDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20250311121525_AddParkingPeriod")]
     partial class AddParkingPeriod
     {

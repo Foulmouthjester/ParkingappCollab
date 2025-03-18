@@ -5,142 +5,59 @@ using ParkingSystem.Data;
 using ParkingSystem.Models;
 using System.Security.Cryptography;
 using System.Text;
+using ParkingSystem.DTOs;
+using BCrypt.Net;
 
-namespace ParkingSystem.Controllers;
-
-[ApiController]
-[Route("api/[controller]")]
-public class ParkingController : ControllerBase
+namespace ParkingSystem.Controllers
 {
-  private readonly ParkingDbContext _context;
-
-  private const decimal DayRate = 14m;
-  private const decimal NightRate = 6m;
-
-  public ParkingController(ParkingDbContext context)
+  [ApiController]
+  [Route("api/auth")]
+  
+  public class AuthController : ControllerBase
   {
-    _context = context;
-  }
+    private readonly ApplicationDbContext _context;
 
-  [HttpPost("register")]
-  public async Task<IActionResult> RegisterUser([FromBody] RegisterRequest request)
-  {
-    if (await _context.Users.AnyAsync(u => u.Email == request.Email))
-      return Conflict("Email is already registered.");
-
-    var user = new User
+    public AuthController(ApplicationDbContext context)
     {
-      Email = request.Email,
-      PasswordHash = HashPassword(request.Password)
-    };
-
-    _context.Users.Add(user);
-    await _context.SaveChangesAsync();
-
-    return Ok("User registered successfully.");
-  }
-
-  [HttpPost("register-car")]
-  public async Task<IActionResult> RegisterCar([FromQuery] string email, [FromQuery] string licensePlate)
-  {
-    var user = await _context.Users.FindAsync(email);
-    if (user == null)
-      return NotFound("User not found.");
-
-    if (user.Cars.Contains(licensePlate))
-      return Conflict("Car is already registered.");
-
-    user.Cars.Add(licensePlate);
-    await _context.SaveChangesAsync();
-
-    return Ok("Car registered successfully.");
-  }
-
-  [HttpPost("begin")]
-  public async Task<IActionResult> BeginPeriod([FromQuery] string licensePlate)
-  {
-    if (await _context.ParkingPeriods.AnyAsync(p => p.LicensePlate == licensePlate))
-      return Conflict("A parking period is already active for this car.");
-
-    var period = new ParkingPeriod
-    {
-      LicensePlate = licensePlate,
-      StartTime = DateTime.Now
-    };
-
-    _context.ParkingPeriods.Add(period);
-    await _context.SaveChangesAsync();
-
-    return Ok("Parking period started.");
-  }
-
-  [HttpPost("end")]
-  public async Task<IActionResult> EndPeriod([FromQuery] string licensePlate)
-  {
-    var period = await _context.ParkingPeriods.FirstOrDefaultAsync(p => p.LicensePlate == licensePlate);
-    if (period == null)
-      return NotFound("No active parking period for this car.");
-
-    _context.ParkingPeriods.Remove(period);
-    await _context.SaveChangesAsync();
-
-    var elapsedTime = DateTime.Now - period.StartTime;
-    var cost = CalculateCost(period.StartTime, elapsedTime);
-
-    var user = await _context.Users.FirstOrDefaultAsync(u => u.Cars.Contains(licensePlate));
-    if (user != null)
-    {
-      user.AccountBalance += cost;
-      await _context.SaveChangesAsync();
+      _context = context;
     }
 
-    return Ok(new
+    // Register endpoint (POST /api/auth/register)
+    [HttpPost("register")]
+    public IActionResult Register([FromBody] UserDto userDto)
     {
-      LicensePlate = licensePlate,
-      PeriodStart = period.StartTime,
-      PeriodEnd = DateTime.Now,
-      Cost = cost
-    });
-  }
+      var existingUser = _context.Users.FirstOrDefault(u => u.Email == userDto.Email);
+      if (existingUser != null)
+      {
+        return BadRequest("User already exists");
+      }
 
-  [HttpGet("account")]
-  public async Task<IActionResult> GetAccountBalance([FromQuery] string email)
-  {
-    var user = await _context.Users.FindAsync(email);
-    if (user == null)
-      return NotFound("User not found.");
+      var newUser = new User
+      {
+        Email = userDto.Email,
+        PasswordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password),
+        AccountBalance = 0
+      };
 
-    return Ok(new { user.Email, user.AccountBalance });
-  }
+      _context.Users.Add(newUser);
+      _context.SaveChanges();
 
-  private decimal CalculateCost(DateTime startTime, TimeSpan elapsedTime)
-  {
-    decimal cost = 0;
-    var currentTime = startTime;
-
-    while (elapsedTime.TotalHours > 0)
-    {
-      decimal hourlyRate = IsDayTime(currentTime) ? DayRate : NightRate;
-      cost += hourlyRate;
-      currentTime = currentTime.AddHours(1);
-      elapsedTime -= TimeSpan.FromHours(1);
+      return Ok(new { Message = "Registration successful!" });
     }
 
-    return cost;
-  }
+    // Login endpoint (POST /api/auth/login)
+    [HttpPost("login")]
+    public IActionResult Login([FromBody] UserDto userDto)
+    {
+      var user = _context.Users.FirstOrDefault(u => u.Email == userDto.Email);
+      if (user == null || !BCrypt.Net.BCrypt.Verify(userDto.Password, user.PasswordHash))
+      {
+        return Unauthorized("Invalid credentials");
+      }
 
-  private bool IsDayTime(DateTime time)
-  {
-    var hour = time.Hour;
-    return hour >= 8 && hour < 18;
-  }
-
-  private string HashPassword(string password)
-  {
-    using var sha256 = SHA256.Create();
-    var bytes = Encoding.UTF8.GetBytes(password);
-    var hash = sha256.ComputeHash(bytes);
-    return Convert.ToBase64String(hash);
+      // Generate JWT token or return success message
+      return Ok(new { Message = "Login successful!" });
+    }
   }
 }
 
