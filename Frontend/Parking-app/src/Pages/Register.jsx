@@ -1,15 +1,20 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { BASE_URL } from "../utils/constants";
 import "../Auth.css";
 
 export const Register = () => {
   const [formData, setFormData] = useState({
-    username: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
 
   const [errors, setErrors] = useState({});
+  const [apiError, setApiError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({
@@ -20,11 +25,6 @@ export const Register = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    
-    // Username validation
-    if (formData.username.length < 3) {
-      newErrors.username = "Username must be at least 3 characters";
-    }
     
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -46,11 +46,36 @@ export const Register = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setApiError("");
+    
     if (validateForm()) {
-      // Add your registration logic here
-      console.log("Registration data:", formData);
+      setIsLoading(true);
+      try {
+        await axios.post(`${BASE_URL}/api/Auth/register`, {
+          email: formData.email,
+          password: formData.password
+        });
+        
+        // Registration successful, redirect to login
+        navigate("/login");
+      } catch (error) {
+        console.error("Registration error:", error);
+        if (error.response) {
+          setApiError(
+            typeof error.response.data === 'string' 
+              ? error.response.data 
+              : "Registration failed. Please try again."
+          );
+        } else if (error.request) {
+          setApiError("No response from server. Please check your connection.");
+        } else {
+          setApiError(`Error: ${error.message}`);
+        }
+      } finally {
+        setIsLoading(false);
+      }
     }
   };
 
@@ -58,19 +83,8 @@ export const Register = () => {
     <div>
       <div className="auth-container">
         <h2>Sign up page</h2>
+        {apiError && <p className="auth-error">{apiError}</p>}
         <form onSubmit={handleSubmit}>
-          <div className="auth-form-group">
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              value={formData.username}
-              onChange={handleChange}
-              required
-            />
-            {errors.username && <p className="auth-error">{errors.username}</p>}
-          </div>
-
           <div className="auth-form-group">
             <input
               type="email"
@@ -107,8 +121,12 @@ export const Register = () => {
             {errors.confirmPassword && <p className="auth-error">{errors.confirmPassword}</p>}
           </div>
 
-          <button type="submit" className="auth-button">
-            Register
+          <button 
+            type="submit" 
+            className="auth-button"
+            disabled={isLoading}
+          >
+            {isLoading ? "Registering..." : "Register"}
           </button>
 
           <p className="auth-switch">
