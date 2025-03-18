@@ -1,10 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
     "\\Frontend",
     "\\Frontend\\Parking-app",
     "\\Frontend\\Parking-app\\src",
     "\\Frontend\\Parking-app\\src\\components"
   ],
+=======
+    "\\Backend"
+  ],
+  "SelectedNode": "\\Backend\\.gitignore",
+>>>>>>> 9177d64f9ea9ca64ddf58d7cea9b1e5d433cb948
   "PreviewInSolutionExplorer": false
 }
