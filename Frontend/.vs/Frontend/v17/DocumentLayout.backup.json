@@ -1,0 +1,202 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\RedirectPage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Parking-app\\src\\RedirectPage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Parking-app\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Parking-app\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Parking-app\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Parking-app\\src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Parking-app\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\index.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Parking-app\\src\\index.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Parking-app\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vite.config.js",
+              "DocumentMoniker": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\vite.config.js",
+              "RelativeDocumentMoniker": "Parking-app\\vite.config.js",
+              "ToolTip": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\vite.config.js",
+              "RelativeToolTip": "Parking-app\\vite.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-17T16:06:27.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\index.css",
+              "RelativeDocumentMoniker": "Parking-app\\src\\index.css",
+              "ToolTip": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\index.css",
+              "RelativeToolTip": "Parking-app\\src\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-17T15:55:04.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "main.jsx",
+              "DocumentMoniker": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\main.jsx",
+              "RelativeDocumentMoniker": "Parking-app\\src\\main.jsx",
+              "ToolTip": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\main.jsx",
+              "RelativeToolTip": "Parking-app\\src\\main.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-17T15:54:55.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "index.jsx",
+              "DocumentMoniker": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\index.jsx",
+              "RelativeDocumentMoniker": "Parking-app\\src\\index.jsx",
+              "ToolTip": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\index.jsx",
+              "RelativeToolTip": "Parking-app\\src\\index.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-17T15:54:53.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RedirectPage.jsx",
+              "DocumentMoniker": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\RedirectPage.jsx",
+              "RelativeDocumentMoniker": "Parking-app\\src\\RedirectPage.jsx",
+              "ToolTip": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\RedirectPage.jsx",
+              "RelativeToolTip": "Parking-app\\src\\RedirectPage.jsx",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-17T15:45:23.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "package-lock.json",
+              "DocumentMoniker": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\package-lock.json",
+              "RelativeDocumentMoniker": "package-lock.json",
+              "ToolTip": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\package-lock.json",
+              "RelativeToolTip": "package-lock.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-17T10:14:32.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\package.json",
+              "RelativeDocumentMoniker": "package.json",
+              "ToolTip": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\package.json",
+              "RelativeToolTip": "package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-17T10:14:27.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\package.json",
+              "RelativeDocumentMoniker": "Parking-app\\package.json",
+              "ToolTip": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\package.json",
+              "RelativeToolTip": "Parking-app\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-17T09:50:04.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\App.jsx",
+              "RelativeDocumentMoniker": "Parking-app\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\App.jsx",
+              "RelativeToolTip": "Parking-app\\src\\App.jsx",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-17T09:37:52.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.css",
+              "DocumentMoniker": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\App.css",
+              "RelativeDocumentMoniker": "Parking-app\\src\\App.css",
+              "ToolTip": "C:\\Users\\jeste\\Documents\\GitHub\\ParkingappCollab\\Frontend\\Parking-app\\src\\App.css",
+              "RelativeToolTip": "Parking-app\\src\\App.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-17T09:37:49.474Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
