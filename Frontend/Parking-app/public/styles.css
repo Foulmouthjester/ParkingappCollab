@@ -1,0 +1,55 @@
+.container {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* Makes sure it's centered vertically */
+  justify-content: center; /* Centers items vertically */
+  text-align: center; /* Ensures text elements align */
+  color: darkred;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  max-width: 300px; /* Restrict width */
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center elements inside */
+  background-color: #f0f0f0;
+}
+
+  .card:hover {
+    background-color: #f0f0f0;
+  }
+
+.input-field {
+  width: 80%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center; /* Centers text inside input */
+  
+}
+
+.button {
+  background-color: blue;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+  .button:hover {
+    background-color: darkblue;
+  }
+
