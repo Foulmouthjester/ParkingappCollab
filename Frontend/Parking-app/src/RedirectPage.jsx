@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { BASE_URL } from "./config";
 export default function RedirectPage() {
   const [cars, setCars] = useState([]);
   const [selectedCar, setSelectedCar] = useState(null);
