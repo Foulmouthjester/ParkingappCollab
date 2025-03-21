@@ -33,13 +33,37 @@ export default function RedirectPage() {
     setIsConfirmOpen(false);
   };
 
+  const handleLogout = () => {
+    console.log("User logged out");
+    localStorage.removeItem("token"); // Remove authentication token
+    localStorage.removeItem("user");  // Remove user data
+    window.location.href = "/login";  // Redirect to login page
+  };
+
+  const removeCar = (carToRemove) => {
+    // Assuming the car object has an id for API purposes; adjust if different
+    fetch(`/api/cars/${carToRemove.id}`, {
+      method: "DELETE",
+    }).then(() => {
+      // Update local state by filtering out the removed car
+      setCars(cars.filter((car) => car.id !== carToRemove.id));
+    }).catch((error) => {
+      console.error("Error removing car:", error);
+    });
+  };
+
   return (
     <div className="container">
-      <h1 className="title">Welcome! Register or Select a Car</h1>
+      <div className="header">
+        <h1 className="title">Welcome! Register or Select a Car</h1>
+        <button className="button logout-button" onClick={handleLogout}>
+          Logout
+        </button>
+      </div>
       <div className="mb-4">
         <input
           type="text"
-          className="input"
+          className="input-field"
           placeholder="Enter car name"
           value={newCar}
           onChange={(e) => setNewCar(e.target.value)}
@@ -51,13 +75,26 @@ export default function RedirectPage() {
           <div key={index} onClick={() => selectCar(car)} className="card">
             <p className="text-lg">{car.name}</p>
             <p className="text-sm">Cost: ${car.cost}</p>
+            {car.cost === 0 && (
+              <button
+                className="button remove-button"
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevents card click from triggering selectCar
+                  removeCar(car);
+                }}
+              >
+                Remove Car
+              </button>
+            )}
           </div>
         ))}
       </div>
       {isConfirmOpen && (
         <div className="dialog">
           <p>Are you sure you want to use {selectedCar?.name}?</p>
-          <button className="button" onClick={() => setIsConfirmOpen(false)}>Cancel</button>
+          <button className="button" onClick={() => setIsConfirmOpen(false)}>
+            Cancel
+          </button>
           <button className="button" onClick={confirmSelection}>Confirm</button>
         </div>
       )}

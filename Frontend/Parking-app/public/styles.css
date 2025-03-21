@@ -4,8 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh; /* Makes sure it's centered vertically */
-  justify-content: center; /* Centers items vertically */
+  height: 100vh; /* Makes sure it's centered vertically */  
   text-align: center; /* Ensures text elements align */
   color: darkred;
 }
@@ -25,7 +24,7 @@
 }
 
   .card:hover {
-    background-color: #f0f0f0;
+    background-color: #e0e0e0;
   }
 
 .input-field {
@@ -53,3 +52,25 @@
     background-color: darkblue;
   }
 
+
+.header {
+  /* Your header styling */
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button.logout-button {
+  /* Specific styling for logout button */
+  background-color: #ff4444; /* Example red color */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+  .button.logout-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+  }
