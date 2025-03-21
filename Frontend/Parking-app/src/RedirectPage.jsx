@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { BASE_URL } from "./config";
+import "./styles.css"
+
 export default function RedirectPage() {
   const [cars, setCars] = useState([]);
   const [selectedCar, setSelectedCar] = useState(null);
@@ -68,7 +70,13 @@ export default function RedirectPage() {
           value={newCar}
           onChange={(e) => setNewCar(e.target.value)}
         />
-        <button className="button" onClick={registerCar}>Register Car</button>
+        <button 
+          className="button" 
+          onClick={registerCar}
+          disabled={!newCar.trim()} // Button is disabled if newCar is empty or only whitespace
+        >
+          Register Car
+        </button>
       </div>
       <div className="car-list">
         {cars.map((car, index) => (
