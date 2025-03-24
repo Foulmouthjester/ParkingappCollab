@@ -79,3 +79,19 @@
     opacity: 0.6;
     cursor: not-allowed;
   }
+  .parking-controls {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+  
+  .button.bg-green-500 {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .button.bg-red-500 {
+    background-color: #ef4444;
+    color: white;
+  }
