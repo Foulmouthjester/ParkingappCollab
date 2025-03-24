@@ -7,6 +7,7 @@ export default function RedirectPage() {
   const [selectedCar, setSelectedCar] = useState(null);
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const [newCar, setNewCar] = useState("");
+  const [isParking, setIsParking] = useState(false);
 
   useEffect(() => {
     fetch("/api/cars")
@@ -54,6 +55,22 @@ export default function RedirectPage() {
     });
   };
 
+  const toggleParking = () => {
+    if (isParking) {
+      console.log("Parking stopped for:", selectedCar.name);
+      // Reset to initial state
+      setIsParking(false);
+      setSelectedCar(null);
+      // Optionally, you could refresh the car list from the server here
+      // fetch("/api/cars")
+      //   .then((res) => res.json())
+      //   .then((data) => setCars(data));
+    } else {
+      console.log("Parking started for:", selectedCar.name);
+      setIsParking(true);
+    }
+  };
+
   return (
     <div className="container">
       <div className="header">
@@ -97,6 +114,21 @@ export default function RedirectPage() {
           </div>
         ))}
       </div>
+      {/* Show selected car and parking controls when a car is confirmed */}
+      {selectedCar && !isConfirmOpen && (
+        <div className="parking-controls mt-4">
+          <p className="text-lg">
+            Selected Car: {selectedCar.name} 
+            {isParking && " (Parking)"}
+          </p>
+          <button 
+            className={`button ${isParking ? 'bg-red-500' : 'bg-green-500'}`}
+            onClick={toggleParking}
+          >
+            {isParking ? "Stop Parking" : "Start Parking"}
+          </button>
+        </div>
+      )}
       {isConfirmOpen && (
         <div className="dialog">
           <p>Are you sure you want to use {selectedCar?.name}?</p>
