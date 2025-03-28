@@ -1,6 +1,10 @@
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Builder; // For WebApplication
+using Microsoft.EntityFrameworkCore; // For AddDbContext
+using Microsoft.Extensions.DependencyInjection; // For AddCors, AddControllers, AddDbContext, AddEndpointsApiExplorer
 using ParkingSystem.Data;
-using ParkingSystem.Models;
+using Swashbuckle.AspNetCore.SwaggerGen; // For AddSwaggerGen
+using Swashbuckle.AspNetCore.SwaggerUI; // For UseSwaggerUI
+using Swashbuckle.AspNetCore.Swagger; // For UseSwagger
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,13 +22,13 @@ builder.Services.AddCors(options =>
 });
 
 
-
+builder.Services.AddControllers();
 // Register ApplicationDbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite("Data Source=parkingapp.db")); // Use your DB connection string
 
 // Add services to the container.
-builder.Services.AddControllers();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();

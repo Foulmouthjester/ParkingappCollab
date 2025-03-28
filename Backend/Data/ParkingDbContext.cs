@@ -8,6 +8,7 @@ namespace ParkingSystem.Data
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<Car> Cars { get; set; }
     public DbSet<ParkingPeriod> ParkingPeriods { get; set; }
   }
 }
